@@ -1,0 +1,26 @@
+{
+    "editor.formatOnSave": true,
+    "autoDocstring.docstringFormat": "sphinx",
+    "autoDocstring.generateDocstringOnEnter": true,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "ruff.lint.select": [
+        "F",
+        "E",
+        "I",
+        "N",
+        "B",
+        "S",
+        "ARG",
+        "D"
+    ],
+    "ruff.lint.enable": true,
+    "ruff.nativeServer": true,
+    "ruff.lineLength": 88,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
+}
