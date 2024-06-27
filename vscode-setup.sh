@@ -10,9 +10,21 @@ install_extension() {
 
 # Prompt the user for their Git configuration
 echo "Configuring Git..."
-read -p "Enter your Git username: " git_username
+
+# Check for username in environment variables
+if [ -z "$USER" ]; then
+    if [ -z "$LOGNAME" ]; then
+        read -p "Enter your Git username: " git_username
+    else
+        git_username=$LOGNAME
+    fi
+else
+    git_username=$USER
+fi
+
 git config --global user.name "$git_username"
 
+# Prompt for email as before
 read -p "Enter your Git email: " git_email
 git config --global user.email "$git_email"
 
