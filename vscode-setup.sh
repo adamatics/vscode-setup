@@ -10,9 +10,21 @@ install_extension() {
 
 # Prompt the user for their Git configuration
 echo "Configuring Git..."
-read -p "Enter your Git username: " git_username
+
+# Check for username in environment variables
+if [ -z "$USER" ]; then
+    if [ -z "$LOGNAME" ]; then
+        read -p "Enter your Git username: " git_username
+    else
+        git_username=$LOGNAME
+    fi
+else
+    git_username=$USER
+fi
+
 git config --global user.name "$git_username"
 
+# Prompt for email as before
 read -p "Enter your Git email: " git_email
 git config --global user.email "$git_email"
 
@@ -36,6 +48,10 @@ echo "Installing VSCode extensions..."
 for extension in "${extensions[@]}"; do
     install_extension $extension
 done
+
+# Install local extension from vsix file
+echo "Installing local VSCode extension..."
+code-server --install-extension shared/adalab-1.7.0.vsix
 
 # Install necessary Python tools
 echo "Installing Python tools..."

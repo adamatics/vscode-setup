@@ -10,6 +10,7 @@ The purpose of this script is to streamline the setup process for Python develop
 
 - `vscode-setup.sh`: A shell script that installs VSCode extensions, necessary Python tools, and configures Git.
 - `settings.json`: A configuration file for VSCode settings.
+- `shared/adalab-1.7.0.vsix`: A local VSCode extension to be installed.
 
 ## How to Use
 
@@ -34,7 +35,7 @@ The purpose of this script is to streamline the setup process for Python develop
 
 4. **Follow the Prompts**
 
-    The script will prompt you to enter your Git username and email. Provide the necessary information when asked.
+    The script will prompt you to enter your Git email. The Git username will be taken from the `USER` or `LOGNAME` environment variable, or you will be prompted if neither is found.
 
 ## Included Extensions
 
@@ -50,6 +51,7 @@ The script will install the following VSCode extensions:
 - `ms-toolsai.vscode-jupyter-slideshow`
 - `njpwerner.autodocstring`
 - `charliermarsh.ruff`
+- Local extension from `shared/adalab-1.7.0.vsix`
 
 ## Additional Python Tools
 
@@ -59,7 +61,7 @@ The script will also install the following Python tools:
 
 ## Git Configuration
 
-The script will configure your Git settings for you. You will be prompted to enter your Git username and email during the setup process.
+The script will configure your Git settings for you. The Git username will be taken from the `USER` or `LOGNAME` environment variable, or you will be prompted if neither is found. You will be prompted to enter your Git email.
 
 ## Notes
 
