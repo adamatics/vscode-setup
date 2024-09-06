@@ -10,7 +10,7 @@ The purpose of this script is to streamline the setup process for Python develop
 
 - `vscode-setup.sh`: A shell script that installs VSCode extensions, necessary Python tools, and configures Git.
 - `settings.json`: A configuration file for VSCode settings.
-- `shared/adalab-1.7.0.vsix`: A local VSCode extension to be installed.
+- `shared/adalab-1.14.0.vsix`: A local VSCode extension to be installed.
 
 ## How to Use
 
@@ -51,7 +51,7 @@ The script will install the following VSCode extensions:
 - `ms-toolsai.vscode-jupyter-slideshow`
 - `njpwerner.autodocstring`
 - `charliermarsh.ruff`
-- Local extension from `shared/adalab-1.7.0.vsix`
+- Local extension from `shared/adalab-1.14.0.vsix`
 
 ## Additional Python Tools
 

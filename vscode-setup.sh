@@ -51,7 +51,7 @@ done
 
 # Install local extension from vsix file
 echo "Installing local VSCode extension..."
-code-server --install-extension shared/adalab-1.7.0.vsix
+code-server --install-extension shared/adalab-1.14.0.vsix
 
 # Install necessary Python tools
 echo "Installing Python tools..."
